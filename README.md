@@ -14,13 +14,13 @@ For a full list of events that are supported see the official [Docker Documentat
 - No exposed ports.
 
 ### Quick Start
-Pull [the image](https://hub.docker.com/r/quaide/dem) and run the container on the host you want to monitor mounting in the `docker.sock` and `conf.yml` file:
+Pull [the image](https://hub.docker.com/r/carbasemin/dem) and run the container on the host you want to monitor mounting in the `docker.sock` and `conf.yml` file:
 
 ```
 docker run -d --name dem \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v conf.yml:/app/conf.yml \
-quaide/dem:latest
+carbasemin/dem:latest
 ```
 ### Configuration
 Example `conf.yml` with a subset of available event types that will trigger a notification. For a full list of all available event types please see the official [Docker Documentation](https://docs.docker.com/engine/reference/commandline/events/).
